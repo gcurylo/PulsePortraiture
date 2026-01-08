@@ -24,7 +24,7 @@ The technical description of this work and its related papers are:
 
 * [Pennucci (2015), "_Wideband Observations of Radio Pulsars_", PhDT, UVa][2015].
 * [Pennucci (2019), "_Frequency-dependent Template Profiles for High-precision Pulsar Timing_", ApJ, 871, 1][2019].
-* [Curylo (2025), "_Frequency- and phase-resolved polarimetry of millisecond pulsars and its application to timing_", arXiv:2512.09220[2025].
+* [Curylo (2025), "_Frequency- and phase-resolved polarimetry of millisecond pulsars and its application to timing_", arXiv:2512.09220][2025].
 
 ## Requirements
 
