@@ -4766,7 +4766,6 @@ def get_spline_model_coords(modelfile, nfreq=1000, lo_freq=None, hi_freq=None,
         of.close()
     return model_freqs, proj_port
 
-
 def file_is_type(filename, filetype="ASCII"):
     """
     Checks if a file is a certain type.
@@ -4775,17 +4774,15 @@ def file_is_type(filename, filetype="ASCII"):
         call to the command 'file -L <filename>'.
     filetype is the string that is searched for in the output.
     """
-    cmd = "file -L %s" % filename
-    o = subprocess.Popen(cmd, shell=isinstance(cmd, str),
-                         stdin=subprocess.PIPE, stdout=subprocess.PIPE,
-                         stderr=subprocess.STDOUT, close_fds=True)
-    line = o.stdout.readline().decode().split()
+    from os import popen4
+    cmd = "file -L %s"%filename
+    i,o = popen4(cmd)
+    line = o.readline().split()
     try:
         line.index(filetype)
         return True
     except ValueError:
         return False
-
 
 def unload_new_archive(data, arch, outfile, state='Intensity', DM=None, dmc=0, weights=None,
                        quiet=False):
